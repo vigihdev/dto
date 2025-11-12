@@ -1,6 +1,6 @@
 <?php
 
-namespace Vigihdev\Contracts\Tests;
+namespace Vigihdev\Dto\Tests;
 
 abstract class TestCase extends \PHPUnit\Framework\TestCase
 {

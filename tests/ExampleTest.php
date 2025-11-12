@@ -1,6 +1,6 @@
 <?php
 
-namespace Vigihdev\Contracts\Tests;
+namespace Vigihdev\Dto\Tests;
 
 use PHPUnit\Framework\Assert;
 
