@@ -8,6 +8,7 @@ use Vigihdev\Contracts\Bootstrap\ImageMediaInterface;
 
 class ImageMediaDto implements ImageMediaInterface
 {
+
     public function __construct(
         private readonly string $imageUrl
     ) {}

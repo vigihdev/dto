@@ -8,6 +8,7 @@ use Vigihdev\Contracts\Bootstrap\OptionsInterface;
 
 class OptionsDto implements OptionsInterface
 {
+
     public function __construct(
         private readonly array $options
     ) {}
