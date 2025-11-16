@@ -4,24 +4,44 @@ declare(strict_types=1);
 
 namespace Vigihdev\Dto\Vehicle;
 
+use Vigihdev\Contracts\Bootstrap\ButtonActionInterface;
 use Vigihdev\Contracts\Vehicle\VehicleInterface;
 use Vigihdev\CoreRender\BaseDto;
 
 final class VehicleDto extends BaseDto implements VehicleInterface
 {
 
+    /**
+     *
+     * @param string $namaMobil
+     * @param string $imageUrl
+     * @param int $harga
+     * @param string $paketSewa
+     * @param string $tipeMobil
+     * @param ButtonActionDto|ButtonActionInterface $button
+     * @return void
+     */
     public function __construct(
         private readonly string $namaMobil,
         private readonly string $imageUrl,
         private readonly int $harga,
         private readonly string $paketSewa,
         private readonly string $tipeMobil,
-        private readonly string $actionUrl
+        private readonly ButtonActionInterface $button
     ) {
         // Validasi basic
         if ($harga < 0) {
             throw new \InvalidArgumentException('Harga tidak boleh negatif');
         }
+    }
+
+    /**
+     *
+     * @return ButtonActionDto
+     */
+    public function getButtonAction(): ButtonActionInterface
+    {
+        return $this->button;
     }
 
     public function getNamaMobil(): string
@@ -47,11 +67,6 @@ final class VehicleDto extends BaseDto implements VehicleInterface
     public function getTipeMobil(): string
     {
         return $this->tipeMobil;
-    }
-
-    public function getActionUrl(): string
-    {
-        return $this->actionUrl;
     }
 
     public function getHargaFormatted(): string

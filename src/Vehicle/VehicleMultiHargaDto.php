@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace Vigihdev\Dto\Vehicle;
 
+use Vigihdev\Contracts\Bootstrap\ButtonActionInterface;
 use Vigihdev\Contracts\Vehicle\VehicleMultiHargaInterface;
+use Vigihdev\Dto\Bootstrap\ButtonActionDto;
 use Vigihdev\CoreRender\BaseDto;
 
 final class VehicleMultiHargaDto extends BaseDto implements VehicleMultiHargaInterface
@@ -15,7 +17,7 @@ final class VehicleMultiHargaDto extends BaseDto implements VehicleMultiHargaInt
      * @param string $namaMobil
      * @param string $imageUrl
      * @param string $tipeMobil
-     * @param string $actionUrl
+     * @param ButtonActionDto|ButtonActionInterface $button
      * @param VehicleCompactHargaDto[]|VehicleNotAvailableHarga[] $paketHargas
      * @return void
      */
@@ -23,9 +25,19 @@ final class VehicleMultiHargaDto extends BaseDto implements VehicleMultiHargaInt
         private readonly string $namaMobil,
         private readonly string $imageUrl,
         private readonly string $tipeMobil,
-        private readonly string $actionUrl,
         private readonly array $paketHargas,
+        private readonly ButtonActionInterface $button
+
     ) {}
+
+    /**
+     *
+     * @return ButtonActionDto
+     */
+    public function getButtonAction(): ButtonActionInterface
+    {
+        return $this->button;
+    }
 
     public function getPaketHargas(): array
     {
@@ -45,10 +57,5 @@ final class VehicleMultiHargaDto extends BaseDto implements VehicleMultiHargaInt
     public function getTipeMobil(): string
     {
         return $this->tipeMobil;
-    }
-
-    public function getActionUrl(): string
-    {
-        return $this->actionUrl;
     }
 }
