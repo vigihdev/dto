@@ -22,10 +22,6 @@ final class VehicleDto extends BaseDto implements VehicleInterface
         if ($harga < 0) {
             throw new \InvalidArgumentException('Harga tidak boleh negatif');
         }
-
-        if (empty($namaMobil) || empty($paketSewa)) {
-            throw new \InvalidArgumentException('namaMobil dan paketSewa sewa wajib diisi');
-        }
     }
 
     public function getNamaMobil(): string
