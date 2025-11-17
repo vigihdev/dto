@@ -6,7 +6,7 @@ namespace Vigihdev\Dto\Vehicle;
 
 use Vigihdev\Contracts\Bootstrap\ButtonActionInterface;
 use Vigihdev\Contracts\Vehicle\VehicleInterface;
-use Vigihdev\CoreRender\BaseDto;
+use Vigihdev\Dto\BaseDto;
 
 final class VehicleDto extends BaseDto implements VehicleInterface
 {

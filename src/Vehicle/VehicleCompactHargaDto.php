@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Vigihdev\Dto\Vehicle;
 
 use Vigihdev\Contracts\Vehicle\VehicleCompactHargaInterface;
-use Vigihdev\CoreRender\BaseDto;
+use Vigihdev\Dto\BaseDto;
 
 final class VehicleCompactHargaDto extends BaseDto implements VehicleCompactHargaInterface
 {

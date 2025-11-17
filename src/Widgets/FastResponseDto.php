@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Vigihdev\Dto\Widgets;
 
 use Vigihdev\Contracts\Widgets\FastResponseInterface;
-use Vigihdev\CoreRender\BaseDto;
+use Vigihdev\Dto\BaseDto;
 
 final class FastResponseDto extends BaseDto implements FastResponseInterface
 {

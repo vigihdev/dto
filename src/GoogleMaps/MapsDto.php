@@ -8,7 +8,7 @@ use Vigihdev\Contracts\GoogleMaps\InfoWindowInterface;
 use Vigihdev\Contracts\GoogleMaps\LatLngInterface;
 use Vigihdev\Contracts\GoogleMaps\MapsInterface;
 use Vigihdev\Contracts\GoogleMaps\MarkerInterface;
-use Vigihdev\CoreRender\BaseDto;
+use Vigihdev\Dto\BaseDto;
 
 final class MapsDto extends BaseDto implements MapsInterface
 {

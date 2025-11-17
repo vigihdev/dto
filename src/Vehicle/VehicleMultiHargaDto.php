@@ -7,7 +7,7 @@ namespace Vigihdev\Dto\Vehicle;
 use Vigihdev\Contracts\Bootstrap\ButtonActionInterface;
 use Vigihdev\Contracts\Vehicle\VehicleMultiHargaInterface;
 use Vigihdev\Dto\Bootstrap\ButtonActionDto;
-use Vigihdev\CoreRender\BaseDto;
+use Vigihdev\Dto\BaseDto;
 
 final class VehicleMultiHargaDto extends BaseDto implements VehicleMultiHargaInterface
 {

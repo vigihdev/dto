@@ -6,7 +6,7 @@ namespace Vigihdev\Dto\GoogleMaps;
 
 use Vigihdev\Contracts\GoogleMaps\LatLngInterface;
 use Vigihdev\Contracts\GoogleMaps\MarkerInterface;
-use Vigihdev\CoreRender\BaseDto;
+use Vigihdev\Dto\BaseDto;
 
 final class MarkerDto extends BaseDto implements MarkerInterface
 {

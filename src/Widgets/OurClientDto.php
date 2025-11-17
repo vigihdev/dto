@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Vigihdev\Dto\Widgets;
 
 use Vigihdev\Contracts\Widgets\OurClientInterface;
-use Vigihdev\CoreRender\BaseDto;
+use Vigihdev\Dto\BaseDto;
 
 final class OurClientDto extends BaseDto implements OurClientInterface
 {

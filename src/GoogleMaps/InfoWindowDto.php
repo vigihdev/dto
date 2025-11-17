@@ -7,7 +7,7 @@ namespace Vigihdev\Dto\GoogleMaps;
 use Vigihdev\Contracts\GoogleMaps\InfoWindowInterface;
 use Vigihdev\Contracts\GoogleMaps\LatLngInterface;
 use Vigihdev\Contracts\GoogleMaps\SizeInterface;
-use Vigihdev\CoreRender\BaseDto;
+use Vigihdev\Dto\BaseDto;
 
 final class InfoWindowDto extends BaseDto implements InfoWindowInterface
 {

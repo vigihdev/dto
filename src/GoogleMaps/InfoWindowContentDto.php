@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Vigihdev\Dto\GoogleMaps;
 
 use Vigihdev\Contracts\GoogleMaps\InfoWindowContentInterface;
-use Vigihdev\CoreRender\BaseDto;
+use Vigihdev\Dto\BaseDto;
 
 final class InfoWindowContentDto extends BaseDto implements InfoWindowContentInterface
 {
