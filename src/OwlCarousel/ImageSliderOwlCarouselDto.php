@@ -13,11 +13,19 @@ final class ImageSliderOwlCarouselDto implements ImageSliderOwlCarouselInterface
         private readonly string $imageUrl,
     ) {}
 
+    /**
+     *
+     * @return string
+     */
     public function getName(): string
     {
         return $this->name;
     }
 
+    /**
+     *
+     * @return string
+     */
     public function getImageUrl(): string
     {
         return $this->imageUrl;
