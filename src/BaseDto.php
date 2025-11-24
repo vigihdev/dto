@@ -14,10 +14,11 @@ abstract class BaseDto implements BaseDtoInterface
 
     public function toArray(): array
     {
-        
+
         $reflection = new ReflectionClass($this);
         $properties = $reflection->getProperties(ReflectionProperty::IS_PUBLIC);
         $properties = empty($properties) ? $reflection->getProperties(ReflectionProperty::IS_PRIVATE) : $properties;
+
 
         $result = [];
         foreach ($properties as $property) {
