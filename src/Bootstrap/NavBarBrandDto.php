@@ -12,8 +12,14 @@ final class NavBarBrandDto extends BaseDto implements NavBarBrandInterface
 
     public function __construct(
         protected string $imageUrl,
+        protected string $name,
         protected array $options = [],
     ) {}
+
+    public function getName(): string
+    {
+        return $this->name;
+    }
 
     public function getImageUrl(): string
     {
