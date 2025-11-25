@@ -28,6 +28,7 @@ final class WhatsappCollapseDto extends BaseDto implements WhatsappCollapseInter
         return $this->title;
     }
 
+
     public function getDescription(): string
     {
         return $this->description;
