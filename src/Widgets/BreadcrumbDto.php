@@ -12,9 +12,9 @@ final class BreadcrumbDto extends BaseDto implements BreadcrumbInterface
 
 
     public function __construct(
-        private readonly string $url,
         private readonly string $title,
         private readonly string $label,
+        private readonly ?string $url,
     ) {}
 
     public function getTitle(): string
@@ -22,7 +22,7 @@ final class BreadcrumbDto extends BaseDto implements BreadcrumbInterface
         return $this->title;
     }
 
-    public function getUrl(): string
+    public function getUrl(): ?string
     {
         return $this->url;
     }
