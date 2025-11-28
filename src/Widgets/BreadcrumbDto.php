@@ -22,6 +22,10 @@ final class BreadcrumbDto extends BaseDto implements BreadcrumbInterface
         return $this->title;
     }
 
+    /**
+     *
+     * @return string|null
+     */
     public function getUrl(): ?string
     {
         return $this->url;
