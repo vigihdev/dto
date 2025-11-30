@@ -10,6 +10,20 @@ use Vigihdev\Contracts\OwlCarousel\OptionsOwlCarouselInterface;
 
 final class OptionsOwlCarouselDto implements OptionsOwlCarouselInterface, JsonableInterface, ArrayableInterface
 {
+
+    /**
+     * Membuat instance objek CarouselDto dengan parameter yang menentukan perilaku carousel
+     *
+     * @param int|float $items Jumlah item yang ditampilkan dalam sekali tampilan carousel
+     * @param bool $loop Menentukan apakah carousel akan kembali ke awal setelah mencapai akhir (default: true)
+     * @param int $margin Ruang kosong horizontal antar item dalam satuan piksel (default: 10)
+     * @param bool $nav Menentukan apakah navigasi panah (prev/next) ditampilkan (default: false)
+     * @param bool $dots Menentukan apakah indikator titik navigasi ditampilkan (default: true)
+     * @param bool $autoplay Menentukan apakah carousel otomatis berganti slide (default: true)
+     * @param array $navText Konten HTML untuk tombol navigasi previous dan next dalam bentuk array dua elemen.
+     *                      Indeks 0: tombol previous, Indeks 1: tombol next.
+     *                      Default berisi ikon material arrow_back_ios dan arrow_forward_ios dengan efek ripple.
+     */
     public function __construct(
         private readonly int|float $items,
         private readonly bool $loop = true,
